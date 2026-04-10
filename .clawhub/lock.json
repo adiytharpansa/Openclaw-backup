@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "skills": {
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1775830202909
+    },
+    "youtube-search-yutu": {
+      "version": "0.10.7-dev",
+      "installedAt": 1775830279682
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1775830312521
+    },
+    "openclaw-whatsapp": {
+      "version": "0.3.0",
+      "installedAt": 1775832823234
+    },
+    "spotify-player": {
+      "version": "1.0.0",
+      "installedAt": 1775832828053
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1775832832222
+    },
+    "himalaya": {
+      "version": "1.0.0",
+      "installedAt": 1775832836658
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1775832841711
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1775832845919
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1775832849960
+    },
+    "xurl": {
+      "version": "1.0.0",
+      "installedAt": 1775832854558
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1775832858682
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1775832862704
+    },
+    "agentic-coding": {
+      "version": "1.0.0",
+      "installedAt": 1775832875750
+    },
+    "oracle": {
+      "version": "1.0.1",
+      "installedAt": 1775832879990
+    },
+    "tmux": {
+      "version": "1.0.0",
+      "installedAt": 1775832884463
+    },
+    "things-mac": {
+      "version": "1.0.0",
+      "installedAt": 1775832893486
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1775832897583
+    },
+    "1password": {
+      "version": "1.0.1",
+      "installedAt": 1775832902101
+    },
+    "openhue": {
+      "version": "1.0.0",
+      "installedAt": 1775832909902
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1775832914184
+    },
+    "eightctl": {
+      "version": "1.0.0",
+      "installedAt": 1775832918758
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1775832922869
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1775832927087
+    },
+    "bear-notes": {
+      "version": "1.0.0",
+      "installedAt": 1775832932099
+    },
+    "linux-camera": {
+      "version": "1.0.0",
+      "installedAt": 1775832945678
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1775832964875
+    }
+  }
+}

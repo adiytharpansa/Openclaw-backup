@@ -1,0 +1,4 @@
+# Email Checker Cron Job
+# Run every 10 minutes to check Gmail
+
+*/10 * * * * /usr/bin/python3 /mnt/data/openclaw/workspace/.openclaw/workspace/email_checker.py
