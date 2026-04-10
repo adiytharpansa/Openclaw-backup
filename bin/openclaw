@@ -1,0 +1,5 @@
+#!/bin/bash
+# OpenClaw Launcher
+WORKSPACE="/mnt/data/openclaw/workspace/.openclaw/workspace"
+cd "$WORKSPACE"
+exec python3 -m openclaw "$@"

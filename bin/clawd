@@ -1,0 +1,33 @@
+#!/bin/bash
+# OpenClaw Quick Start
+WORKSPACE="/mnt/data/openclaw/workspace/.openclaw/workspace"
+cd "$WORKSPACE"
+
+case "$1" in
+    start)
+        echo "🚀 Starting OpenClaw..."
+        python3 -m openclaw start
+        ;;
+    stop)
+        echo "🛑 Stopping OpenClaw..."
+        python3 -m openclaw stop
+        ;;
+    status)
+        echo "📊 OpenClaw Status"
+        python3 -m openclaw status
+        ;;
+    restart)
+        echo "🔄 Restarting OpenClaw..."
+        python3 -m openclaw stop
+        sleep 2
+        python3 -m openclaw start
+        ;;
+    logs)
+        echo "📋 Showing logs..."
+        tail -f "$WORKSPACE/.local/logs/openclaw.log"
+        ;;
+    *)
+        echo "Usage: clawd {start|stop|status|restart|logs}"
+        exit 1
+        ;;
+esac

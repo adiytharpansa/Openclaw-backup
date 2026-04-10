@@ -1,0 +1,30 @@
+{
+  "scheduler": {
+    "enabled": true,
+    "tasks": [
+      {
+        "name": "health_check",
+        "interval_minutes": 5,
+        "script": "scripts/health-check.sh"
+      },
+      {
+        "name": "watchdog",
+        "interval_minutes": 1,
+        "script": "scripts/watchdog.sh"
+      },
+      {
+        "name": "auto_backup",
+        "interval_minutes": 1440,
+        "script": "scripts/auto-backup.sh",
+        "time": "02:00"
+      },
+      {
+        "name": "optimize",
+        "interval_minutes": 10080,
+        "script": "scripts/optimize.sh",
+        "day": "sunday",
+        "time": "03:00"
+      }
+    ]
+  }
+}

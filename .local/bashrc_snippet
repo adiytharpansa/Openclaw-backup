@@ -1,0 +1,5 @@
+# OpenClaw Auto-Start
+export OPENCLAW_WORKSPACE="/mnt/data/openclaw/workspace/.openclaw/workspace"
+export PATH="$OPENCLAW_WORKSPACE/bin:$PATH"
+alias claw='cd $OPENCLAW_WORKSPACE'
+alias clawd='$OPENCLAW_WORKSPACE/bin/clawd'
