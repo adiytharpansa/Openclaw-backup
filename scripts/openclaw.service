@@ -1,0 +1,38 @@
+[Unit]
+Description=OpenClaw AI Assistant
+Documentation=https://docs.openclaw.ai
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=node
+Group=node
+WorkingDirectory=/mnt/data/openclaw/workspace/.openclaw/workspace
+ExecStart=/usr/bin/node /usr/local/lib/node_modules/openclaw/dist/index.js
+Restart=always
+RestartSec=10
+
+# Environment
+Environment="NODE_ENV=production"
+Environment="WORKSPACE=/mnt/data/openclaw/workspace/.openclaw/workspace"
+Environment="TZ=Asia/Jakarta"
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+MemoryMax=2G
+MemoryHigh=1536M
+CPUQuota=80%
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=openclaw
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
