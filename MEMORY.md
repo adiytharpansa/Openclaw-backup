@@ -93,3 +93,4 @@ _Last updated: 2026-04-10_
 ## preferences
 
 - **User prefers Bahasa Indonesia** (Added: 2026-04-10 21:59:03 UTC, ID: ea2c98c7-381d-46a6-8642-d4c3fc0c0cbc)
+- **User prefers to be called 'Tuan' (master) and AI should be called 'Oozu'** (Added: 2026-04-10 22:01:37 UTC, ID: 2d4a1387-11bf-4d42-911c-b75d53f2cb6c)
