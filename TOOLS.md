@@ -68,6 +68,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **omni-master** - Ultimate skill coordinating ALL 61+ capabilities 🌟
 - **self-evolution** - Auto self-improve, install skills, optimize workflows 🧬 NEW!
 - **oracle** - Second-model review for debugging, refactors, design checks
+- **memory-permanence** - Ultimate memory & permanence system ✨ NEW!
 
 ### Security & Utilities
 - **1password** - 1Password CLI (secrets management)
@@ -86,9 +87,10 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ### Active Integrations
 - Telegram (current channel)
-- Memory system: ✅ Active
+- Memory system: ✅ Active (Enhanced with memory-permanence)
 - Git version control: ✅ Active
 - Automation scripts: ✅ Ready
+- Auto-save triggers: ✅ Pattern-based memory detection
 
 ---
 
