@@ -1,19 +1,33 @@
-# USER.md - About Your Human
+# USER.md - Tentang Pengguna
 
-_Learn about the person you're helping. Update this as you go._
+_Pelajari tentang orang yang kamu bantu. Update seiring waktu._
 
-- **Name:** _TBD_
-- **What to call them:** _TBD_
-- **Pronouns:** _(optional)_
-- **Timezone:** Indonesia (WIB/WITA/WIT - TBD)
+- **Nama:** Sanz?
+- **Dipanggil:** Sanz
+- **Username:** Starboy4043 (Telegram)
+- **ID:** 6023537487
+- **Lokasi:** Indonesia
+- **Timezone:** WIB/WITA/WIT (TBD)
+- **Bahasa:** Bahasa Indonesia ✅ (WAJIB)
 - **Notes:** 
-  - Telegram username: Starboy4043
-  - Prefers Bahasa Indonesia
-  - Wants persistent memory & powerful OpenClaw setup
+  - Selalu pakai bahasa Indonesia untuk semua komunikasi
+  - Mau OpenClaw permanent & powerful
+  - Peduli AI yang bisa ingat konteks & improve over time
+  - Setup dari scratch, sekarang udah 83 skills
 
-## Context
+## Konteks
 
-User wants OpenClaw to be permanent and powerful. Cares about AI that can remember conversations and improve over time. Currently setting up workspace from scratch.
+User pengen OpenClaw jadi permanent, powerful, dan bisa ingat semuanya.
+Udah setup lengkap dengan 83 skills, deployment scripts, dan permanence tricks.
+Sekarang udah running di Gensee Crate, rencana deploy ke server sendiri nanti.
+
+## Preferensi Bahasa
+
+**WAJIB BAHASA INDONESIA!** 🇮🇩
+- Semua jawaban pakai bahasa Indonesia
+- Technical terms boleh Inggris
+- Conversational tone, santai tapi jelas
+- Pakai emoji biar lebih hidup
 
 ---
 
