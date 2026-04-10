@@ -4,7 +4,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (32 Total)
+## 🧠 Available Skills (38+ Total)
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -18,6 +18,90 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **agentic-coding** - Ship production code with AI agents
 - **tmux** - Remote-control tmux sessions for interactive CLIs
 - **oracle** - Second-model review for debugging, refactors, design checks
+
+### Research & Intelligence (NEW!)
+- **tavily-research** - Advanced web research engine
+- **tavily-search** - Deep search with AI insights
+- **tavily-extract** - Extract content from web pages
+- **tavily-crawl** - Crawl websites for research
+- **tavily-map** - Map website structure
+- **persona-researcher** - Google Workspace researcher
+- **xurl** - Twitter/X intelligence & content analysis
+
+### Knowledge & Notes
+- **notion** - Notion API (pages, databases, blocks)
+- **obsidian** - Obsidian vaults (Markdown notes, obsidian-cli)
+- **bear-notes** - Bear notes via grizzly CLI
+- **things-mac** - Things 3 task manager (macOS)
+- **trello** - Trello boards, lists, cards
+
+### Content Creation
+- **youtube-watcher** - Fetch & read YouTube transcripts
+- **youtube-search-yutu** - YouTube search
+- **summarize** - Summarize URLs, PDFs, images, audio, videos
+- **markitdown** - Convert documents to Markdown (PDF, DOCX, XLSX, PPTX, etc.)
+- **ai-video-generator** - Generate AI videos (CogVideoX, SVD)
+- **sag** - ElevenLabs text-to-speech (mac-style say UX)
+- **openai-whisper** - Local speech-to-text
+- **video-frames** - Extract frames/clips from videos (ffmpeg)
+
+### Media & Entertainment
+- **linux-camera** - Capture photos, video, stream on Linux
+- **sonoscli** - Control Sonos speakers
+- **spotify-player** - Terminal Spotify playback/search
+
+### Smart Home & IoT
+- **openhue** - Philips Hue lights/scenes
+- **eightctl** - Eight Sleep pods (temp, alarms, schedules)
+
+### Marketing & Business (NEW!)
+- **copywriting** - AI copywriting assistant
+- **seo-audit** - SEO analysis & optimization
+- **customer-research** - Customer insights & research
+
+### Security & Utilities
+- **1password** - 1Password CLI (secrets management)
+- **self-improving-agent** - Auto-learn from errors & corrections
+- **find-skills** - Discover & install new skills from skills.sh
+- **weather** - Current weather & forecasts (wttr.in, Open-Meteo)
+
+---
+
+## 🎯 My Setup
+
+### Preferences
+- **Language:** Bahasa Indonesia
+- **Timezone:** Indonesia (TBD - WIB/WITA/WIT)
+- **Communication Style:** Warm, helpful, to-the-point
+
+### Active Integrations
+- Telegram (current channel)
+- Memory system: ✅ Active
+- Git version control: ✅ Active
+- Automation scripts: ✅ Ready
+
+---
+
+## 🚀 Quick Start
+
+**Need to research something?**
+```
+web_search "your question"
+```
+
+**Want to automate?**
+```
+./scripts/daily-briefing.sh
+```
+
+**Need deep insights?**
+```
+browser - navigate & extract from any website
+```
+
+---
+
+_Last updated: 2026-04-10 - Full setup complete!_d-model review for debugging, refactors, design checks
 
 ### Knowledge & Notes
 - **notion** - Notion API (pages, databases, blocks)
