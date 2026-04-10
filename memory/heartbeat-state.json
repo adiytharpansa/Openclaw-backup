@@ -1,0 +1,20 @@
+{
+  "lastChecks": {
+    "email": null,
+    "calendar": null,
+    "weather": null,
+    "notifications": null,
+    "projects": null
+  },
+  "checkSchedule": {
+    "morning": "08:00",
+    "afternoon": "14:00",
+    "evening": "20:00"
+  },
+  "timezone": "UTC",
+  "alertsEnabled": true,
+  "quietHours": {
+    "start": "23:00",
+    "end": "08:00"
+  }
+}
