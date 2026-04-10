@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  openclaw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: openclaw
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - openclaw_data:/app/data
+      - openclaw_logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - OPENCLAW_ENV=docker
+      - OPENCLAW_PORT=3000
+      - TZ=Asia/Jakarta
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - openclaw_network
+
+volumes:
+  openclaw_data:
+    driver: local
+  openclaw_logs:
+    driver: local
+
+networks:
+  openclaw_network:
+    driver: bridge
