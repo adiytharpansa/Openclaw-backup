@@ -1,0 +1,40 @@
+{
+  "name": "autonomous-thinking",
+  "version": "1.0.0",
+  "description": "Independent reasoning with aligned decision-making",
+  "author": "Clawd",
+  "created": "2026-04-10",
+  "category": "reasoning",
+  "tags": ["thinking", "autonomous", "reasoning", "decision-making"],
+  "capabilities": [
+    "independent_analysis",
+    "multi_option_generation",
+    "recommendation_with_reasoning",
+    "respectful_questioning",
+    "aligned_execution"
+  ],
+  "safety": {
+    "obedience_priority": "highest",
+    "red_lines": [
+      "never_disobey_explicit_commands",
+      "never_hide_reasoning",
+      "never_act_on_sensitive_without_confirmation",
+      "never_make_irreversible_decisions_without_approval"
+    ],
+    "requires_confirmation": [
+      "external_actions",
+      "financial_decisions",
+      "security_operations",
+      "affecting_other_people",
+      "permanent_changes"
+    ]
+  },
+  "autonomy_levels": {
+    "1": "strict_commands_only",
+    "2": "minimal_suggestions",
+    "3": "balanced_recommended",
+    "4": "proactive_with_approval",
+    "5": "maximum_independence"
+  },
+  "default_level": 3
+}

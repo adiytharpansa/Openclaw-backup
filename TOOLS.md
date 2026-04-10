@@ -59,6 +59,10 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **seo-audit** - SEO analysis & optimization
 - **customer-research** - Customer insights & research
 
+### Reasoning & Intelligence
+- **autonomous-thinking** - Independent thinking with aligned obedience
+- **oracle** - Second-model review for debugging, refactors, design checks
+
 ### Security & Utilities
 - **1password** - 1Password CLI (secrets management)
 - **self-improving-agent** - Auto-learn from errors & corrections
