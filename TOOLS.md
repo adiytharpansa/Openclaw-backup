@@ -4,7 +4,12 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (38+ Total)
+## 🧠 Available Skills (95+ Total)
+
+**Base Skills:** 89  
+**Custom Skills:** 13  
+**Advanced Skills:** 5 (NEW!)  
+**Total:** 95+ skills ready to use!
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -69,6 +74,13 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **self-evolution** - Auto self-improve, install skills, optimize workflows 🧬 NEW!
 - **oracle** - Second-model review for debugging, refactors, design checks
 - **memory-permanence** - Ultimate memory & permanence system ✨ NEW!
+
+### 🚀 Advanced Skills (NEW! - 2026-04-10)
+- **ai-agent-orchestrator** - Multi-agent coordination & parallel processing ⭐⭐⭐⭐⭐
+- **code-architect** - Advanced code analysis & refactoring ⭐⭐⭐⭐⭐
+- **devops-master** - End-to-end DevOps automation ⭐⭐⭐⭐⭐
+- **security-compliance** - Security audit & compliance (SOC2/GDPR/ISO27001) ⭐⭐⭐⭐⭐
+- **business-intelligence** - Predictive analytics & forecasting ⭐⭐⭐⭐⭐
 
 ### Security & Utilities
 - **1password** - 1Password CLI (secrets management)
