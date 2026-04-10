@@ -4,14 +4,15 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (98+ Total)
+## 🧠 Available Skills (99+ Total)
 
 **Base Skills:** 89  
-**Custom Skills:** 16  
+**Custom Skills:** 17  
 **Advanced Skills:** 5 (NEW!)
 **Workflow Skills:** 1 (NEW!)  
-**Personal Skills:** 2 (NEW!)  
-**Total:** 98+ skills ready to use!
+**Personal Skills:** 2 (NEW!)
+**Media Skills:** 1 (NEW!)  
+**Total:** 99+ skills ready to use!
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -57,6 +58,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **linux-camera** - Capture photos, video, stream on Linux
 - **sonoscli** - Control Sonos speakers
 - **spotify-player** - Terminal Spotify playback/search
+- **music-downloader** - Download & manage music library 🎵 ⭐ NEW!
 
 ### Smart Home & IoT
 - **openhue** - Philips Hue lights/scenes
