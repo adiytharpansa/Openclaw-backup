@@ -1,0 +1,131 @@
+{
+  "name": "Performance Optimization Config",
+  "version": "1.0.0",
+  "description": "Optimizations for speed, efficiency, and resource management",
+
+  "caching": {
+    "enabled": true,
+    "strategies": {
+      "memoryQueries": {
+        "enabled": true,
+        "ttl": 3600,
+        "maxEntries": 100,
+        "description": "Cache frequent memory searches"
+      },
+      "webResults": {
+        "enabled": true,
+        "ttl": 86400,
+        "maxEntries": 50,
+        "description": "Cache web search results (24h)"
+      },
+      "fileReads": {
+        "enabled": true,
+        "ttl": 300,
+        "maxEntries": 200,
+        "description": "Cache recent file reads (5min)"
+      }
+    }
+  },
+
+  "batchProcessing": {
+    "enabled": true,
+    "thresholds": {
+      "fileOperations": 5,
+      "apiCalls": 10,
+      "memoryWrites": 3
+    },
+    "description": "Batch operations when count exceeds threshold"
+  },
+
+  "parallelExecution": {
+    "enabled": true,
+    "maxConcurrent": 3,
+    "independentTasks": true,
+    "description": "Run independent tasks in parallel"
+  },
+
+  "resourceLimits": {
+    "maxSessionDuration": 3600,
+    "maxMemoryUsage": "512MB",
+    "maxFileHandles": 100,
+    "maxConcurrentSubAgents": 5
+  },
+
+  "optimizations": {
+    "lazyLoading": {
+      "enabled": true,
+      "description": "Load large files on-demand, not upfront"
+    },
+    "streamingResponses": {
+      "enabled": true,
+      "description": "Stream long responses instead of buffering"
+    },
+    "compression": {
+      "enabled": true,
+      "algorithms": ["gzip", "brotli"],
+      "minSize": 1024,
+      "description": "Compress responses >1KB"
+    },
+    "debouncing": {
+      "enabled": true,
+      "delayMs": 300,
+      "description": "Debounce rapid successive requests"
+    }
+  },
+
+  "errorHandling": {
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "backoff": "exponential",
+      "baseDelayMs": 1000,
+      "maxDelayMs": 30000
+    },
+    "fallback": {
+      "enabled": true,
+      "description": "Use fallback strategies on failure"
+    },
+    "circuitBreaker": {
+      "enabled": true,
+      "threshold": 5,
+      "timeoutMs": 60000,
+      "description": "Open circuit after 5 failures in 60s"
+    }
+  },
+
+  "monitoring": {
+    "enabled": true,
+    "metrics": [
+      "responseTime",
+      "errorRate",
+      "cacheHitRate",
+      "throughput",
+      "resourceUsage"
+    ],
+    "alerts": {
+      "highErrorRate": {
+        "threshold": 0.1,
+        "window": "5m"
+      },
+      "slowResponse": {
+        "threshold": 5000,
+        "unit": "ms"
+      }
+    }
+  },
+
+  "scheduledTasks": {
+    "cacheCleanup": {
+      "schedule": "0 */6 * * *",
+      "description": "Clean expired cache entries every 6 hours"
+    },
+    "memoryIndex": {
+      "schedule": "0 0 * * *",
+      "description": "Rebuild memory index daily at midnight"
+    },
+    "healthCheck": {
+      "schedule": "*/15 * * * *",
+      "description": "Health check every 15 minutes"
+    }
+  }
+}

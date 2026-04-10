@@ -1,0 +1,90 @@
+{
+  "name": "Advanced Memory Retrieval Config",
+  "version": "1.0.0",
+  "description": "Optimized memory search and retrieval patterns",
+  
+  "searchStrategies": {
+    "semantic": {
+      "enabled": true,
+      "maxResults": 10,
+      "minScore": 0.6,
+      "description": "Semantic similarity search across MEMORY.md and daily logs"
+    },
+    "keyword": {
+      "enabled": true,
+      "caseSensitive": false,
+      "description": "Exact keyword matching for specific terms"
+    },
+    "temporal": {
+      "enabled": true,
+      "priority": "recent",
+      "lookbackDays": 30,
+      "description": "Time-based retrieval, prioritize recent memories"
+    },
+    "tagged": {
+      "enabled": true,
+      "tags": ["decision", "preference", "lesson", "project", "person"],
+      "description": "Tag-based filtering for categorized memories"
+    }
+  },
+
+  "retrievalPatterns": {
+    "beforeTask": {
+      "description": "Search before starting any task",
+      "queries": [
+        "similar tasks",
+        "user preferences",
+        "past decisions",
+        "lessons learned"
+      ],
+      "purpose": "Avoid repeating mistakes, apply learnings"
+    },
+    "duringTask": {
+      "description": "Search during complex tasks",
+      "queries": [
+        "relevant context",
+        "related projects",
+        "key people",
+        "constraints"
+      ],
+      "purpose": "Maintain context, ensure consistency"
+    },
+    "afterTask": {
+      "description": "Search after completing tasks",
+      "queries": [
+        "what to remember",
+        "follow-ups needed",
+        "related ongoing work"
+      ],
+      "purpose": "Capture learnings, update memory"
+    }
+  },
+
+  "memoryIndex": {
+    "buildOnCommit": true,
+    "indexFields": [
+      "date",
+      "topic",
+      "people",
+      "projects",
+      "decisions",
+      "preferences",
+      "lessons"
+    ],
+    "indexPath": "memory/.index.json"
+  },
+
+  "caching": {
+    "enabled": true,
+    "ttl": 3600,
+    "maxEntries": 100,
+    "description": "Cache frequent memory queries for faster retrieval"
+  },
+
+  "crossReference": {
+    "enabled": true,
+    "linkRelated": true,
+    "buildGraph": true,
+    "description": "Link related memories, build knowledge graph"
+  }
+}
