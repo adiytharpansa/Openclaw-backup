@@ -1,10 +1,10 @@
 {
   "lastChecks": {
-    "email": null,
-    "calendar": null,
+    "email": 1712779200,
+    "calendar": 1712779200,
     "weather": 1712770800,
     "notifications": 1712770800,
-    "projects": null
+    "projects": 1712779200
   },
   "checkSchedule": {
     "morning": "08:00",
