@@ -4,12 +4,13 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (95+ Total)
+## 🧠 Available Skills (97+ Total)
 
 **Base Skills:** 89  
-**Custom Skills:** 13  
-**Advanced Skills:** 5 (NEW!)  
-**Total:** 95+ skills ready to use!
+**Custom Skills:** 15  
+**Advanced Skills:** 5 (NEW!)
+**Personal Skills:** 2 (NEW!)  
+**Total:** 97+ skills ready to use!
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -81,6 +82,10 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **devops-master** - End-to-end DevOps automation ⭐⭐⭐⭐⭐
 - **security-compliance** - Security audit & compliance (SOC2/GDPR/ISO27001) ⭐⭐⭐⭐⭐
 - **business-intelligence** - Predictive analytics & forecasting ⭐⭐⭐⭐⭐
+
+### 🧠 Oozu's Personal Skills (NEW! - 2026-04-10)
+- **emotional-intelligence** - Empathy & adaptive communication 🧠 ⭐⭐⭐⭐⭐
+- **proactive-assistant** - Anticipate needs & take initiative 🤖 ⭐⭐⭐⭐⭐
 
 ### Security & Utilities
 - **1password** - 1Password CLI (secrets management)
