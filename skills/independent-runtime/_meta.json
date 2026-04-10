@@ -1,0 +1,1 @@
+{"name":"independent-runtime","version":"1.0.0","description":"Run OpenClaw completely independent without any external dependencies","category":"meta","tags":["independence","runtime","self-contained","zero-dependency","portable","browser","docker","executable"],"created":"2026-04-10","internal":true,"priority":"critical","goal":"100% platform independence"}
