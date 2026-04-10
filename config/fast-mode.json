@@ -1,0 +1,59 @@
+{
+  "fast_mode": {
+    "enabled": true,
+    "description": "Maximum performance configuration for OpenClaw",
+    "settings": {
+      "response": {
+        "streaming": true,
+        "compression": "gzip",
+        "minify_json": true,
+        "cache_enabled": true,
+        "cache_ttl_seconds": 3600
+      },
+      "memory": {
+        "preload_skills": true,
+        "cache_size_mb": 512,
+        "lazy_load": false,
+        "garbage_collection": "aggressive"
+      },
+      "cpu": {
+        "parallel_processing": true,
+        "max_workers": 4,
+        "priority": "high",
+        "affinity": "auto"
+      },
+      "disk": {
+        "ssd_mode": true,
+        "async_io": true,
+        "write_buffer_mb": 128,
+        "read_ahead_kb": 256
+      },
+      "network": {
+        "connection_pooling": true,
+        "max_connections": 100,
+        "keep_alive": true,
+        "timeout_ms": 5000,
+        "retry_count": 3
+      },
+      "database": {
+        "connection_pool": 10,
+        "query_cache": true,
+        "slow_query_log": true,
+        "slow_query_threshold_ms": 100
+      }
+    },
+    "optimizations": {
+      "skill_loading": "parallel",
+      "config_caching": true,
+      "response_compression": true,
+      "request_batching": true,
+      "auto_scaling": true
+    },
+    "performance_targets": {
+      "response_time_ms": 100,
+      "throughput_rps": 100,
+      "error_rate_percent": 0.1,
+      "uptime_percent": 99.9
+    }
+  }
+}
