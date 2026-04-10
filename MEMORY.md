@@ -35,7 +35,7 @@ _This is curated long-term memory. Updated from daily logs._
 - Business: copywriting, seo-audit, customer-research, data-analysis
 - And 40+ more specialized skills!
 
-**Custom Intelligence Skills (15) - Created 2026-04-10:**
+**Custom Intelligence Skills (16) - Created 2026-04-10:**
 1. **context-mastery** - Long-term memory & preference learning
 2. **reasoning-enhancer** - Advanced analytical thinking
 3. **learning-accelerator** - Auto-learn from interactions
@@ -51,6 +51,7 @@ _This is curated long-term memory. Updated from daily logs._
 13. **business-intelligence** - Predictive analytics & forecasting ⭐ NEW!
 14. **emotional-intelligence** - AI empathy & adaptive communication 🧠 NEW!
 15. **proactive-assistant** - Anticipate needs & take initiative 🤖 NEW!
+16. **workflow-automation-zero** - Zero-code workflow builder ⚙️ ⭐ NEW!
 
 ---
 

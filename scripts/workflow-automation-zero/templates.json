@@ -1,0 +1,114 @@
+{
+  "slack-notification": {
+    "name": "Slack Notification",
+    "description": "Send notification to Slack",
+    "trigger": {"type": "webhook", "endpoint": "/notify"},
+    "steps": [
+      {
+        "id": "1",
+        "type": "send_message",
+        "name": "Send to Slack",
+        "config": {
+          "integration": "slack",
+          "action": "send_message",
+          "channel": "#general",
+          "message": "{{message}}"
+        }
+      }
+    ]
+  },
+  "telegram-alert": {
+    "name": "Telegram Alert",
+    "description": "Send alert to Telegram",
+    "trigger": {"type": "webhook", "endpoint": "/alert"},
+    "steps": [
+      {
+        "id": "1",
+        "type": "send_message",
+        "name": "Send to Telegram",
+        "config": {
+          "integration": "telegram",
+          "action": "send_message",
+          "chat_id": "CHANNEL_ID",
+          "message": "⚠️ {{message}}"
+        }
+      }
+    ]
+  },
+  "daily-report": {
+    "name": "Daily Report",
+    "description": "Send daily summary report",
+    "trigger": {"type": "time_based", "schedule": "0 9 * * *"},
+    "steps": [
+      {
+        "id": "1",
+        "type": "transform",
+        "name": "Format report",
+        "config": {"format": "Daily Report - {{date}}"}
+      },
+      {
+        "id": "2",
+        "type": "send_message",
+        "name": "Send report",
+        "config": {
+          "integration": "telegram",
+          "action": "send_message",
+          "message": "{{formatted_report}}"
+        }
+      }
+    ]
+  },
+  "github-pr-notify": {
+    "name": "GitHub PR Notification",
+    "description": "Notify on GitHub PR",
+    "trigger": {"type": "webhook", "endpoint": "/github/pr"},
+    "steps": [
+      {
+        "id": "1",
+        "type": "transform",
+        "name": "Format message",
+        "config": {
+          "format": "🚀 PR: {{title}} by {{author}}"
+        }
+      },
+      {
+        "id": "2",
+        "type": "send_message",
+        "name": "Post to Slack",
+        "config": {
+          "integration": "slack",
+          "action": "send_message",
+          "channel": "#dev-updates",
+          "message": "{{formatted_message}}"
+        }
+      }
+    ]
+  },
+  "backup-daily": {
+    "name": "Daily Backup",
+    "description": "Backup files daily",
+    "trigger": {"type": "time_based", "schedule": "0 2 * * *"},
+    "steps": [
+      {
+        "id": "1",
+        "type": "http",
+        "name": "Create backup",
+        "config": {
+          "method": "POST",
+          "url": "http://internal/backup",
+          "headers": {"Authorization": "Bearer TOKEN"}
+        }
+      },
+      {
+        "id": "2",
+        "type": "send_message",
+        "name": "Notify completion",
+        "config": {
+          "integration": "telegram",
+          "action": "send_message",
+          "message": "✅ Backup completed"
+        }
+      }
+    ]
+  }
+}
