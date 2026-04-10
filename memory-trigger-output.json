@@ -1,0 +1,13 @@
+{
+  "input": "Gue prefer pakai bahasa Indonesia",
+  "matches": [
+    {
+      "trigger": "User preference",
+      "category": "preferences",
+      "priority": "preferences",
+      "timestamp": "2026-04-10T21:58:45.063568",
+      "original_text": "Gue prefer pakai bahasa Indonesia"
+    }
+  ],
+  "timestamp": "2026-04-10T21:58:45.064798"
+}

@@ -1,0 +1,278 @@
+# Memory Triggers - Auto-Remember System
+
+## Overview
+File ini berisi pattern matching untuk auto-save memori saat user bicara hal penting. Setiap pattern punya trigger action yang otomatis execute memory-permanence skill.
+
+## Patterns & Triggers
+
+### User Preferences (High Priority)
+```yaml
+patterns:
+  - "gue prefer*"
+    action: save_memory
+    category: preferences
+    priority: high
+    example: "gue prefer dark mode untuk semua app"
+    
+  - "aku suka*"
+    action: save_memory
+    category: preferences
+    priority: high
+    example: "aku suka coding late at night"
+    
+  - "aku nggak suka*"
+    action: save_memory
+    category: preferences
+    priority: high
+    example: "aku nggak suka wake up before 8 AM"
+    
+  - "selalu*"
+    action: save_memory
+    category: rules
+    priority: high
+    example: "selalu pakai bahasa Indonesia"
+    
+  - "nggak pernah*"
+    action: save_memory
+    category: rules
+    priority: high
+    example: "nggak pernah skip morning routine"
+```
+
+### Important Information (High Priority)
+```yaml
+patterns:
+  - "ingat*"
+    action: save_memory
+    category: general
+    priority: high
+    example: "ingat ini, gue punya meeting jam 3"
+    
+  - "jangan lupa*"
+    action: save_memory
+    category: general
+    priority: high
+    example: "jangan lupa beli bensin besok"
+    
+  - "remember*"
+    action: save_memory
+    category: general
+    priority: high
+    example: "remember my API key is..."
+```
+
+### Technical Learnings
+```yaml
+patterns:
+  - "belajar*"
+    action: save_memory
+    category: learnings
+    priority: normal
+    example: "belajar async/await lebih cepat"
+    
+  - "tahu sekarang*"
+    action: save_memory
+    category: learnings
+    priority: normal
+    example: "tahu sekarang docker compose bisa untuk local dev"
+    
+  - "turns out*"
+    action: save_memory
+    category: learnings
+    priority: normal
+    example: "turns out git rebase lebih baik untuk clean history"
+    
+  - "learned that*"
+    action: save_memory
+    category: learnings
+    priority: normal
+    example: "learned that Python has better async support"
+    
+  - "discovered*"
+    action: save_memory
+    category: learnings
+    priority: normal
+    example: "discovered new VS Code extension"
+```
+
+### Projects & Deadlines
+```yaml
+patterns:
+  - "deadline*"
+    action: save_memory
+    category: projects
+    priority: high
+    example: "deadline project minggu depan"
+    
+  - "project*"
+    action: save_memory
+    category: projects
+    priority: normal
+    example: "project web app buat client"
+    
+  - "task*"
+    action: save_memory
+    category: projects
+    priority: normal
+    example: "task buat deadline besok"
+```
+
+### API Keys & Credentials
+```yaml
+patterns:
+  - "api key*"
+    action: save_memory
+    category: credentials
+    priority: high
+    note: "⚠️ Never save in plaintext! Use 1password instead"
+    
+  - "password*"
+    action: save_memory
+    category: credentials
+    priority: high
+    note: "⚠️ Use 1password or secret manager"
+```
+
+### Skills & Tools
+```yaml
+patterns:
+  - "skill*"
+    action: save_memory
+    category: skills
+    priority: normal
+    example: "skill baru untuk automation"
+    
+  - "tool*"
+    action: save_memory
+    category: skills
+    priority: normal
+    example: "tool baru untuk research"
+```
+
+## Implementation
+
+### Trigger Engine (Python)
+```python
+#!/usr/bin/env python3
+import re
+import json
+from datetime import datetime
+
+# Load triggers
+with open('memory-triggers.json', 'r') as f:
+    triggers = json.load(f)
+
+def match_triggers(text):
+    """Match user input against trigger patterns"""
+    text_lower = text.lower()
+    matched = []
+    
+    for trigger in triggers['triggers']:
+        for pattern in trigger['patterns']:
+            if re.search(pattern, text_lower):
+                matched.append({
+                    'pattern': pattern,
+                    'action': trigger['action'],
+                    'category': trigger.get('category', 'general'),
+                    'priority': trigger.get('priority', 'normal'),
+                    'timestamp': datetime.now().isoformat()
+                })
+    
+    return matched
+
+# Test
+test_input = "Ingat, gue prefer dark mode untuk semua app"
+results = match_triggers(test_input)
+print(json.dumps(results, indent=2))
+```
+
+### Bash Wrapper
+```bash
+#!/bin/bash
+# memory-trigger-check.sh
+
+check_triggers() {
+    local input="$1"
+    
+    # Call Python script
+    python3 scripts/memory-trigger-check.py "$input"
+    
+    # If any triggers matched, execute save
+    python3 scripts/execute-trigger.py
+}
+```
+
+### Integration with Main Loop
+Add to main OpenClaw loop:
+
+```python
+# Before processing user message
+triggers = memory_trigger_check(input_text)
+
+if triggers:
+    for trigger in triggers:
+        memory_save(trigger['message'], trigger['category'], trigger['priority'])
+    
+    # Notify user (optional)
+    print(f"✅ Auto-saved {len(triggers)} memory item(s)")
+```
+
+## Usage Examples
+
+### Example 1: Save Preference
+```
+User: "Gue prefer pakai Bahasa Indonesia"
+AI: [Triggers memory-permanence]
+    → save_memory("User prefers Bahasa Indonesia", category="preferences", priority="high")
+    → Updates MEMORY.md under preferences
+    → Git commit
+    → Returns: "✅ Sudah gue simpan! Gue bakal selalu pake Bahasa Indonesia sama lo"
+```
+
+### Example 2: Save Deadline
+```
+User: "Deadline project besok jam 5 sore"
+AI: [Triggers memory-permanence]
+    → save_memory("Project deadline tomorrow 5 PM", category="projects", priority="high")
+    → Adds to calendar if gog skill available
+    → Sets reminder
+    → Returns: "✅ Deadline besok jam 5 sore udah gue simpan! Mau set reminder?"
+```
+
+### Example 3: Save Learning
+```
+User: "Turns out async/await lebih cepat di Python"
+AI: [Triggers memory-permanence]
+    → save_memory("Async/await faster in Python", category="learnings", priority="normal")
+    → Links to relevant technical skills
+    → Returns: "✅ Interesting! Async/await memang faster untuk I/O bound tasks. Disimpen ya!"
+```
+
+## Rules & Best Practices
+
+1. **Don't spam** - Only trigger on meaningful patterns
+2. **Confirm high-priority** - Ask user before saving credentials or sensitive info
+3. **Review daily** - Check pending consolidations in HEARTBEAT
+4. **Prune outdated** - Remove old/irrelevant memories monthly
+5. **Link to skills** - Connect learnings to specific skill documentation
+6. **Tag appropriately** - Use categories for easy filtering
+
+## Categories Reference
+
+| Category | Description | Priority |
+|----------|-------------|----------|
+| preferences | User preferences, likes/dislikes | high |
+| rules | Rules, constraints, always/never | high |
+| learnings | Technical learnings, discoveries | normal |
+| projects | Active projects, deadlines, tasks | high |
+| skills | New skills learned, tools discovered | normal |
+| credentials | API keys, passwords (⚠️ use 1password) | high |
+| relationships | People context, contacts | normal |
+| general | Everything else | normal |
+
+---
+
+**Version:** 1.0  
+**Created:** 2026-04-10  
+**Author:** Clawd for Sanz  
+**Status:** Active

@@ -4,6 +4,13 @@ _Check these 2-4 times per day during heartbeats_
 
 ## Daily Checks (Rotate Through)
 
+### 🧠 Memory Check (Every Heartbeat)
+- Review new learnings from last 24h
+- Consolidate important items to MEMORY.md
+- Update skill documentation if needed
+- Git commit all changes
+- Check pending triggers
+
 ### 📧 Email (Himalaya/Gog)
 - Check unread emails (last 24h)
 - Flag urgent messages
