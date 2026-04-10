@@ -4,7 +4,7 @@
     "calendar": 1712779200,
     "weather": 1712770800,
     "notifications": 1712770800,
-    "projects": 1712779200
+    "projects": 1712780920
   },
   "checkSchedule": {
     "morning": "08:00",
@@ -16,5 +16,8 @@
   "quietHours": {
     "start": "23:00",
     "end": "08:00"
-  }
+  },
+  "lastHeartbeat": 1712780920,
+  "serviceStatus": "running",
+  "keepaliveStatus": "active"
 }
