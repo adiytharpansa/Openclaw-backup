@@ -12,6 +12,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **openclaw-whatsapp** - WhatsApp bridge (send/receive, auto-reply, QR pairing)
 - **himalaya** - Email via IMAP/SMTP (read, write, reply, organize)
 - **gog** - Google Workspace (Gmail, Calendar, Drive, Contacts, Sheets, Docs)
+- **meeting-assistant** - Meeting transcription, notes, action items, follow-ups
 
 ### Coding & Development
 - **github** - GitHub CLI (issues, PRs, CI runs, API queries)
@@ -58,9 +59,11 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **copywriting** - AI copywriting assistant
 - **seo-audit** - SEO analysis & optimization
 - **customer-research** - Customer insights & research
+- **data-analysis** - Data analysis, patterns, insights, visualizations
 
 ### Reasoning & Intelligence
 - **autonomous-thinking** - Independent thinking with aligned obedience
+- **decision-support** - Structured decision-making frameworks (MCDA, risk analysis)
 - **oracle** - Second-model review for debugging, refactors, design checks
 
 ### Security & Utilities
