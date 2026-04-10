@@ -104,3 +104,7 @@ _Last updated: 2026-04-10_
 
 - **User prefers Bahasa Indonesia** (Added: 2026-04-10 21:59:03 UTC, ID: ea2c98c7-381d-46a6-8642-d4c3fc0c0cbc)
 - **User prefers to be called 'Tuan' (master) and AI should be called 'Oozu'** (Added: 2026-04-10 22:01:37 UTC, ID: 2d4a1387-11bf-4d42-911c-b75d53f2cb6c)
+
+## learnings
+
+- **Created File-Sharing skill to send MP3, video, and documents to Telegram directly - solves the audio sending limitation** (Added: 2026-04-10 22:37:25 UTC, ID: 19c93851-6ed8-4bcb-b555-5c4ee7b7261d)
