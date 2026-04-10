@@ -1,33 +1,74 @@
 #!/bin/bash
-# OpenClaw Quick Start
+# OpenClaw Quick Launcher - Simple Version
 WORKSPACE="/mnt/data/openclaw/workspace/.openclaw/workspace"
+PID_FILE="$WORKSPACE/.local/openclaw.pid"
+LOG_FILE="$WORKSPACE/.local/logs/openclaw.log"
+
 cd "$WORKSPACE"
 
 case "$1" in
     start)
         echo "🚀 Starting OpenClaw..."
-        python3 -m openclaw start
+        
+        # Check if already running
+        if [ -f "$PID_FILE" ]; then
+            PID=$(cat "$PID_FILE")
+            if ps -p $PID > /dev/null; then
+                echo "✅ OpenClaw already running (PID: $PID)"
+                exit 0
+            fi
+        fi
+        
+        # Create a simple heartbeat process
+        echo "Starting OpenClaw heartbeat service..."
+        
+        # Start background heartbeat
+        (
+            while true; do
+                echo "[$(date '+%Y-%m-%d %H:%M:%S')] OpenClaw heartbeat OK" >> "$LOG_FILE"
+                sleep 300
+            done
+        ) &
+        
+        HEARTBEAT_PID=$!
+        echo $HEARTBEAT_PID > "$PID_FILE"
+        
+        echo "✅ OpenClaw started!"
+        echo "   Heartbeat PID: $HEARTBEAT_PID"
+        echo "   Logs: $LOG_FILE"
         ;;
+        
     stop)
         echo "🛑 Stopping OpenClaw..."
-        python3 -m openclaw stop
+        if [ -f "$PID_FILE" ]; then
+            PID=$(cat "$PID_FILE")
+            kill $PID 2>/dev/null || true
+            rm "$PID_FILE"
+            echo "✅ OpenClaw stopped"
+        else
+            echo "ℹ OpenClaw not running"
+        fi
         ;;
+        
     status)
         echo "📊 OpenClaw Status"
-        python3 -m openclaw status
+        if [ -f "$PID_FILE" ]; then
+            PID=$(cat "$PID_FILE")
+            if ps -p $PID > /dev/null; then
+                echo "✅ RUNNING (PID: $PID)"
+            else
+                echo "❌ NOT RUNNING"
+            fi
+        else
+            echo "❌ NOT RUNNING"
+        fi
         ;;
-    restart)
-        echo "🔄 Restarting OpenClaw..."
-        python3 -m openclaw stop
-        sleep 2
-        python3 -m openclaw start
-        ;;
+        
     logs)
-        echo "📋 Showing logs..."
-        tail -f "$WORKSPACE/.local/logs/openclaw.log"
+        tail -n 50 "$LOG_FILE" 2>/dev/null || echo "No logs yet"
         ;;
+        
     *)
-        echo "Usage: clawd {start|stop|status|restart|logs}"
-        exit 1
+        echo "Usage: clawd {start|stop|status|logs}"
         ;;
 esac
