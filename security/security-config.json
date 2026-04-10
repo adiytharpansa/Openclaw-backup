@@ -1,0 +1,172 @@
+{
+  "name": "Security Hardening Configuration",
+  "version": "1.0.0",
+  "description": "Security settings for OpenClaw workspace",
+
+  "accessControl": {
+    "enabled": true,
+    "authentication": {
+      "required": true,
+      "method": "token",
+      "tokenExpiry": 86400
+    },
+    "authorization": {
+      "roles": ["admin", "user", "readonly"],
+      "defaultRole": "user"
+    }
+  },
+
+  "encryption": {
+    "atRest": {
+      "enabled": true,
+      "algorithm": "AES-256-GCM",
+      "keyRotation": "monthly"
+    },
+    "inTransit": {
+      "enabled": true,
+      "minTLS": "1.2"
+    },
+    "sensitiveFields": [
+      "passwords",
+      "api_keys",
+      "tokens",
+      "credentials",
+      "secrets"
+    ]
+  },
+
+  "auditLogging": {
+    "enabled": true,
+    "logLevel": "info",
+    "events": [
+      "login",
+      "logout",
+      "file_access",
+      "file_modification",
+      "command_execution",
+      "api_call",
+      "config_change",
+      "permission_change"
+    ],
+    "retention": "90 days",
+    "logPath": "security/audit.log",
+    "format": "json"
+  },
+
+  "fileSecurity": {
+    "permissions": {
+      "config": "600",
+      "scripts": "755",
+      "data": "644",
+      "logs": "640"
+    },
+    "integrity": {
+      "enabled": true,
+      "algorithm": "SHA-256",
+      "checkOnRead": false,
+      "checkOnWrite": true
+    },
+    "sensitiveDirectories": [
+      "config/",
+      "security/",
+      "backups/"
+    ]
+  },
+
+  "networkSecurity": {
+    "allowedHosts": [
+      "localhost",
+      "127.0.0.1"
+    ],
+    "blockedHosts": [],
+    "rateLimiting": {
+      "enabled": true,
+      "requestsPerMinute": 100,
+      "burstLimit": 20
+    },
+    "cors": {
+      "enabled": true,
+      "allowedOrigins": ["*"],
+      "allowedMethods": ["GET", "POST", "PUT", "DELETE"]
+    }
+  },
+
+  "secretManagement": {
+    "provider": "1password",
+    "fallback": "environment",
+    "rotation": {
+      "enabled": true,
+      "interval": "30 days"
+    },
+    "vaults": [
+      "Personal",
+      "Work"
+    ]
+  },
+
+  "vulnerabilityScanning": {
+    "enabled": true,
+    "schedule": "daily",
+    "autoFix": false,
+    "notifyOnFindings": true,
+    "scanTargets": [
+      "dependencies",
+      "configurations",
+      "secrets"
+    ]
+  },
+
+  "incidentResponse": {
+    "enabled": true,
+    "autoBlock": true,
+    "notifyAdmin": true,
+    "lockoutThreshold": 5,
+    "lockoutDuration": 3600,
+    "alertChannels": [
+      "email",
+      "telegram"
+    ]
+  },
+
+  "compliance": {
+    "standards": [
+      "SOC2",
+      "GDPR"
+    ],
+    "dataRetention": {
+      "user_data": "365 days",
+      "logs": "90 days",
+      "backups": "30 days"
+    },
+    "rightToErasure": true,
+    "dataPortability": true
+  },
+
+  "securityHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Content-Security-Policy": "default-src 'self'"
+  },
+
+  "monitoring": {
+    "enabled": true,
+    "metrics": [
+      "failed_logins",
+      "permission_denials",
+      "suspicious_activity",
+      "config_changes"
+    ],
+    "alerts": {
+      "multipleFailedLogins": {
+        "threshold": 5,
+        "window": "5 minutes"
+      },
+      "unusualActivity": {
+        "enabled": true,
+        "sensitivity": "medium"
+      }
+    }
+  }
+}
