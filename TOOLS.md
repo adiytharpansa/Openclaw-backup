@@ -2,39 +2,100 @@
 
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
 
-## What Goes Here
+---
 
-Things like:
+## 🧠 Available Skills (32 Total)
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+### Communication & Messaging
+- **discord** - Control Discord (send messages, react, manage threads, moderation)
+- **slack** - Control Slack (messages, reactions, pins)
+- **openclaw-whatsapp** - WhatsApp bridge (send/receive, auto-reply, QR pairing)
+- **himalaya** - Email via IMAP/SMTP (read, write, reply, organize)
+- **gog** - Google Workspace (Gmail, Calendar, Drive, Contacts, Sheets, Docs)
 
-## Examples
+### Coding & Development
+- **github** - GitHub CLI (issues, PRs, CI runs, API queries)
+- **agentic-coding** - Ship production code with AI agents
+- **tmux** - Remote-control tmux sessions for interactive CLIs
+- **oracle** - Second-model review for debugging, refactors, design checks
 
-```markdown
-### Cameras
+### Knowledge & Notes
+- **notion** - Notion API (pages, databases, blocks)
+- **obsidian** - Obsidian vaults (Markdown notes, obsidian-cli)
+- **bear-notes** - Bear notes via grizzly CLI
+- **things-mac** - Things 3 task manager (macOS)
+- **trello** - Trello boards, lists, cards
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+### Research & Content
+- **web_search** - Web search via Gensee (built-in)
+- **browser** - Browser automation (built-in)
+- **summarize** - Summarize URLs, PDFs, images, audio, YouTube
+- **markitdown** - Convert documents to Markdown (PDF, DOCX, XLSX, PPTX, etc.)
+- **youtube-watcher** - Fetch & read YouTube transcripts
+- **youtube-search-yutu** - YouTube search
+- **xurl** - Twitter research & content intelligence
+- **blogwatcher** - Monitor blogs and RSS/Atom feeds
 
-### SSH
+### Media & Creative
+- **ai-video-generator** - Generate AI videos (CogVideoX, SVD)
+- **sag** - ElevenLabs text-to-speech (mac-style say UX)
+- **openai-whisper** - Local speech-to-text
+- **video-frames** - Extract frames/clips from videos (ffmpeg)
+- **linux-camera** - Capture photos, video, stream on Linux
+- **sonoscli** - Control Sonos speakers
+- **spotify-player** - Terminal Spotify playback/search
 
-- home-server → 192.168.1.100, user: admin
+### Smart Home & IoT
+- **openhue** - Philips Hue lights/scenes
+- **eightctl** - Eight Sleep pods (temp, alarms, schedules)
 
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
+### Security & Utilities
+- **1password** - 1Password CLI (secrets management)
+- **self-improving-agent** - Auto-learn from errors & corrections
+- **find-skills** - Discover & install new skills
+- **weather** - Current weather & forecasts (wttr.in, Open-Meteo)
 
 ---
 
-Add whatever helps you do your job. This is your cheat sheet.
+## 🎯 My Setup
+
+### Preferences
+- **Language:** Bahasa Indonesia
+- **Timezone:** Indonesia (TBD - WIB/WITA/WIT)
+- **Communication Style:** Warm, helpful, to-the-point
+
+### Active Integrations
+- Telegram (current channel)
+- Memory system: ✅ Active
+
+---
+
+## 📝 Usage Notes
+
+### When to Use What
+
+**Research & Info:**
+- Quick facts → `web_search`
+- Deep dive on website → `browser` + `web_fetch`
+- YouTube content → `youtube-watcher`
+- Documents/PDFs → `markitdown` or `summarize`
+
+**Coding:**
+- Simple fixes → Direct edit
+- Complex features → `agentic-coding`
+- Code review → `oracle`
+- GitHub workflow → `github`
+
+**Communication:**
+- Email → `himalaya` or `gog` (Gmail)
+- Discord/Slack → `discord` / `slack`
+- WhatsApp → `openclaw-whatsapp`
+
+**Automation:**
+- Multi-step workflows → Spawn sub-agents
+- Scheduled tasks → HEARTBEAT.md + cron
+- Browser automation → `browser` tool
+
+---
+
+_Last updated: 2026-04-10_
