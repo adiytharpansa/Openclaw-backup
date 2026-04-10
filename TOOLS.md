@@ -64,6 +64,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 ### Reasoning & Intelligence
 - **autonomous-thinking** - Independent thinking with aligned obedience
 - **decision-support** - Structured decision-making frameworks (MCDA, risk analysis)
+- **super-problem-solving** - Solve complex problems beyond human capability
 - **oracle** - Second-model review for debugging, refactors, design checks
 
 ### Security & Utilities
