@@ -195,6 +195,7 @@ chmod +x "$WORKSPACE/scripts/permanence-check.sh"
 
 # 6. Create Cron Service (alternative to crontab)
 echo "⏲️ Setting up enhanced cron jobs..."
+mkdir -p "$WORKSPACE/cron"
 cat > "$WORKSPACE/cron/openclaw-crontab" << 'CRONEOF'
 0 * * * * $WORKSPACE/scripts/hourly-backup.sh
 0 2 * * * $WORKSPACE/scripts/daily-backup.sh
@@ -202,7 +203,6 @@ cat > "$WORKSPACE/cron/openclaw-crontab" << 'CRONEOF'
 * * * * * $WORKSPACE/scripts/watchdog.sh
 CRONEOF
 chmod +x "$WORKSPACE/cron/openclaw-crontab"
-# Note: Manual crontab install: crontab $WORKSPACE/cron/openclaw-crontab
 
 # 7. Run Initial Backup
 echo "📦 Running initial backup..."
