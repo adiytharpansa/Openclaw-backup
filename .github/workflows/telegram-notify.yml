@@ -1,0 +1,34 @@
+name: 📬 Telegram Notifications
+
+on:
+  workflow_run:
+    workflows:
+      - Auto Heartbeat
+      - Heartbeat Monitor
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  notify:
+    name: Notify Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send notification
+        run: |
+          echo "Telegram notification would be sent here"
+          echo "Configure Telegram bot token in secrets for real notifications"
+          
+      - name: Summary
+        run: |
+          echo "## 📬 Telegram Notification"
+          echo ""
+          echo "| Event | Status |"
+          echo "|-------|--------|"
+          echo "| Workflow | ${{ github.event.workflow_run.name }} |"
+          echo "| Result | ${{ github.event.workflow_run.conclusion }} |"
+          echo ""
+          echo "To enable real Telegram notifications:"
+          echo "1. Add TELEGRAM_BOT_TOKEN to secrets"
+          echo "2. Add TELEGRAM_CHAT_ID to secrets"
+          echo "3. Update this workflow to send via Telegram API"
