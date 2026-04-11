@@ -1,0 +1,14 @@
+{
+  "best_overall": "llama3.3:70b",
+  "best_lightweight": "llama3.2:8b",
+  "best_coding": "qwen2.5-coder:14b",
+  "best_reasoning": "deepseek-r1:14b",
+  "best_multilingual": "qwen2.5:7b",
+  "best_speed": "mistral:7b",
+  "best_long_context": "gemma3:27b",
+  "latest_qwen": "qwen3.5:latest",
+  "installed": [],
+  "target_hardware": "16gb",
+  "auto_setup": true,
+  "last_updated": "2026-04-11T12:56:00Z"
+}
