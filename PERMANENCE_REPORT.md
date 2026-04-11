@@ -1,6 +1,6 @@
 # 🛡️ OpenClaw Enhanced Permanence Report
 
-**Generated:** 2026-04-11_09-13-18 UTC
+**Generated:** 2026-04-11_09-13-57 UTC
 **Location:** Gensee Crate VM
 
 ---
@@ -77,8 +77,10 @@
 ## 📝 Recent Activity
 
 **Most Recent Backups:**
+- Apr 11 (/mnt/data/openclaw/workspace/.openclaw/workspace/backups/enhanced/daily/daily_20260411.tar.gz)
 
 **Recent Git Commits:**
+a889989 Enhanced permanence system - 95% permanent with disaster recovery
 a0f0d73 Enhanced permanence verification 2026-04-11_09-13-17
 79da3e7 Remove huggingface token
 6a940a8 Remove token from documentation
@@ -88,7 +90,6 @@ e54297c Add .gitignore - Exclude large backup files
 2c93233 Added 100% permanence setup guide - Manual GitHub repo creation required
 dd6d045 Created auto-backup-master skill - Fully automated zero-config backup system
 e858ccf Auto-backup: 2026-04-11_08-47-20
-4abbc74 Setup cloud backup - .env file created, ready for credentials
 
 ---
 
