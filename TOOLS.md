@@ -4,16 +4,17 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (101+ Total)
+## 🧠 Available Skills (107+ Total)
 
 **Base Skills:** 89  
-**Custom Skills:** 19  
+**Custom Skills:** 25  
 **Advanced Skills:** 5 (NEW!)
 **Workflow Skills:** 1 (NEW!)  
 **Personal Skills:** 2 (NEW!)
 **Media Skills:** 1 (NEW!)
 **File Sharing Skills:** 1 (NEW!)  
-**Total:** 101+ skills ready to use!
+**System Skills:** 6 (NEW!)  
+**Total:** 107+ skills ready to use!
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -101,6 +102,12 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **self-improving-agent** - Auto-learn from errors & corrections
 - **find-skills** - Discover & install new skills from skills.sh
 - **weather** - Current weather & forecasts (wttr.in, Open-Meteo)
+- **system-manager** - Manage systemd services & cron jobs 🔧 ⭐ NEW!
+- **log-manager** - View, search & manage system logs 🔍 ⭐ NEW!
+- **alert-notification** - Send alerts via Telegram/Discord/Email 🚨 ⭐ NEW!
+- **resource-monitor** - Monitor CPU, RAM, disk, network usage 📊 ⭐ NEW!
+- **auto-heal** - Automatic problem detection & self-healing 🏥 ⭐ NEW!
+- **dashboard** - Web-based status monitoring 📱 ⭐ NEW!
 
 ---
 

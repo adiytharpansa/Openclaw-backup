@@ -35,7 +35,7 @@ _This is curated long-term memory. Updated from daily logs._
 - Business: copywriting, seo-audit, customer-research, data-analysis
 - And 40+ more specialized skills!
 
-**Custom Intelligence Skills (19) - Created 2026-04-10 to 2026-04-11:**
+**Custom Intelligence Skills (25) - Created 2026-04-10 to 2026-04-11:**
 1. **context-mastery** - Long-term memory & preference learning
 2. **reasoning-enhancer** - Advanced analytical thinking
 3. **learning-accelerator** - Auto-learn from interactions
@@ -55,6 +55,12 @@ _This is curated long-term memory. Updated from daily logs._
 17. **music-downloader** - Music download & library manager 🎵 ⭐ NEW!
 18. **file-sharing** - Send files to Telegram & platforms 📁 ⭐ NEW!
 19. **self-evolving-ai** - AI that learns from YOU! 🧬 ⭐ NEW!
+20. **system-manager** - Manage systemd services & cron jobs 🔧 ⭐ NEW!
+21. **log-manager** - View, search & manage logs 🔍 ⭐ NEW!
+22. **alert-notification** - Send alerts to Telegram/Discord/Email 🚨 ⭐ NEW!
+23. **resource-monitor** - Monitor CPU, RAM, disk, network 📊 ⭐ NEW!
+24. **auto-heal** - Automatic problem detection & self-healing 🏥 ⭐ NEW!
+25. **dashboard** - Web-based status monitoring page 📱 ⭐ NEW!
 
 ---
 
@@ -110,3 +116,5 @@ _Last updated: 2026-04-10_
 
 - **Created File-Sharing skill to send MP3, video, and documents to Telegram directly - solves the audio sending limitation** (Added: 2026-04-10 22:37:25 UTC, ID: 19c93851-6ed8-4bcb-b555-5c4ee7b7261d)
 - **Created Self-Evolving AI skill - AI yang bisa belajar otomatis dari setiap interaksi dengan Tuan. Skill ini bisa track conversations, analyze patterns, extract insights, optimize skills, dan evolve MEMORY.md secara otomatis. Total skill sekarang 101!** (Added: 2026-04-11 06:50:02 UTC, ID: 6a026c51-eaca-4724-a8be-59a5daf58626)
+- **Created System Manager skill - Manage systemd services & cron jobs. Sekarang OpenClaw bisa activate permanence secara otomatis di server dengan systemd! Total skill: 102** (Added: 2026-04-11 09:35:00 UTC)
+- **Created 5 new Production Skills (system-manager, log-manager, alert-notification, resource-monitor, auto-heal, dashboard) - Complete permanent activation stack for production servers! Total skill: 107** (Added: 2026-04-11 09:45:00 UTC)
