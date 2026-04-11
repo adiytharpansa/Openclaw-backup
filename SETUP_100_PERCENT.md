@@ -29,7 +29,7 @@ git remote set-url origin https://github.com/adiytharpansa/openclaw-backup.git
 
 # Add authentication
 GIT_ASKPASS=/bin/echo GIT_USERNAME=adiytharpansa git push -u origin main
-# Password: 
+# Password: YOUR_NEW_TOKEN_HERE
 
 # OR use credential helper
 git config --global credential.helper store
