@@ -30,8 +30,7 @@ jobs:
           echo "Deploying Cloudflare Worker..."
           wrangler deploy skills/free-permanence/cloudflare-worker.js \
             --name openclaw-monitor \
-            --compatibility-date 2024-01-01 \
-            --dry-run || echo "Dry run complete"
+            --compatibility-date 2024-01-01
           echo "Deploy complete!"
 
       - name: Get Worker URL
