@@ -1,0 +1,26 @@
+# Git Large Files - Don't track backups in git
+backups/enhanced/*.tar.gz
+backups/enhanced/**/*.tar.gz
+*.tar.gz
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Session files
+openclaw_backup.session
+
+# Environment with secrets
+.env
+
+# Large data files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.cache/
+__pycache__/
