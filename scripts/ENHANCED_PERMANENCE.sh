@@ -193,10 +193,16 @@ fi
 EOF
 chmod +x "$WORKSPACE/scripts/permanence-check.sh"
 
-# 6. Setup Cron Jobs for Enhanced Backup
+# 6. Create Cron Service (alternative to crontab)
 echo "⏲️ Setting up enhanced cron jobs..."
-(crontab -l 2>/dev/null | grep -v "openclaw" ; echo "0 * * * * $WORKSPACE/scripts/hourly-backup.sh") | crontab -
-(crontab -l 2>/dev/null | grep -v "daily-backup" ; echo "0 2 * * * $WORKSPACE/scripts/daily-backup.sh") | crontab -
+cat > "$WORKSPACE/cron/openclaw-crontab" << 'CRONEOF'
+0 * * * * $WORKSPACE/scripts/hourly-backup.sh
+0 2 * * * $WORKSPACE/scripts/daily-backup.sh
+*/5 * * * * $WORKSPACE/scripts/health-check.sh
+* * * * * $WORKSPACE/scripts/watchdog.sh
+CRONEOF
+chmod +x "$WORKSPACE/cron/openclaw-crontab"
+# Note: Manual crontab install: crontab $WORKSPACE/cron/openclaw-crontab
 
 # 7. Run Initial Backup
 echo "📦 Running initial backup..."
