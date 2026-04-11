@@ -1,4 +1,7 @@
-0 * * * * $WORKSPACE/scripts/hourly-backup.sh
-0 2 * * * $WORKSPACE/scripts/daily-backup.sh
-*/5 * * * * $WORKSPACE/scripts/health-check.sh
-* * * * * $WORKSPACE/scripts/watchdog.sh
+# OpenClaw Enhanced Backup System
+# Install with: crontab /mnt/data/openclaw/workspace/.openclaw/workspace/cron/openclaw-crontab
+
+0 * * * * /mnt/data/openclaw/workspace/.openclaw/workspace/scripts/hourly-backup.sh
+0 2 * * * /mnt/data/openclaw/workspace/.openclaw/workspace/scripts/daily-backup.sh
+*/5 * * * * /mnt/data/openclaw/workspace/.openclaw/workspace/scripts/health-check.sh
+* * * * * /mnt/data/openclaw/workspace/.openclaw/workspace/scripts/watchdog.sh
