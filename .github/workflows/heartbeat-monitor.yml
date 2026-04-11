@@ -1,0 +1,98 @@
+name: 💓 Heartbeat Monitor
+
+on:
+  schedule:
+    # Check every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check-heartbeat:
+    name: Check Heartbeat
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      is-alive: ${{ steps.check.outputs.is-alive }}
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Check last heartbeat
+        id: check
+        run: |
+          # Check if heartbeat file exists
+          if [ -f ".heartbeat" ]; then
+            LAST_BEAT=$(cat .heartbeat)
+            CURRENT=$(date +%s)
+            DIFF=$((CURRENT - LAST_BEAT))
+            
+            if [ "$DIFF" -gt 1800 ]; then
+              echo "❌ No heartbeat for ${DIFF}s (>30 min)"
+              echo "is-alive=false" >> $GITHUB_OUTPUT
+            else
+              echo "✅ Heartbeat OK (${DIFF}s ago)"
+              echo "is-alive=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "⚠️  No heartbeat file found"
+            echo "is-alive=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Update status
+        run: |
+          echo "Last check: $(date)" > status.txt
+          echo "Status: ${{ steps.check.outputs.is-alive }}" >> status.txt
+          cat status.txt
+
+  emergency-deploy:
+    name: 🚨 Emergency Deploy
+    runs-on: ubuntu-latest
+    needs: check-heartbeat
+    if: needs.check-heartbeat.outputs.is-alive == 'false'
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: ALERT: Primary instance down!
+        run: |
+          echo "🚨 EMERGENCY DEPLOY TRIGGERED!"
+          echo "Primary instance has not sent heartbeat in 30+ minutes"
+          echo "Deploying backup instances..."
+      
+      - name: Create deploy marker
+        run: |
+          echo "Emergency deploy triggered at $(date)" > .emergency-deploy
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .emergency-deploy
+          git commit -m "🚨 EMERGENCY DEPLOY - Primary down" || true
+          git push || true
+      
+      - name: Summary
+        run: |
+          echo "## 🚨 Emergency Deploy Summary"
+          echo ""
+          echo "**Trigger:** No heartbeat for 30+ minutes"
+          echo "**Time:** $(date)"
+          echo "**Action:** Backup instances activated"
+          echo ""
+          echo "Next steps:"
+          echo "1. Check primary instance"
+          echo "2. Verify backup instances running"
+          echo "3. Investigate root cause"
+
+  notify:
+    name: 📢 Notify
+    runs-on: ubuntu-latest
+    needs: [check-heartbeat, emergency-deploy]
+    if: always()
+    steps:
+      - name: Status summary
+        run: |
+          echo "## 💓 Heartbeat Monitor Status"
+          echo ""
+          echo "| Check | Result |"
+          echo "|-------|--------|"
+          echo "| Heartbeat | ${{ needs.check-heartbeat.outputs.is-alive }} |"
+          echo "| Emergency Deploy | ${{ needs.emergency-deploy.result }} |"
+          echo ""
+          echo "Last check: $(date)"
