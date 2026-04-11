@@ -1,0 +1,4 @@
+0 * * * * $WORKSPACE/scripts/hourly-backup.sh
+0 2 * * * $WORKSPACE/scripts/daily-backup.sh
+*/5 * * * * $WORKSPACE/scripts/health-check.sh
+* * * * * $WORKSPACE/scripts/watchdog.sh
