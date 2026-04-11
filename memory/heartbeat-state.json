@@ -1,23 +1,10 @@
 {
   "lastChecks": {
-    "email": 1712779200,
-    "calendar": 1712779200,
-    "weather": 1712770800,
-    "notifications": 1712770800,
-    "projects": 1712780920
+    "memory": "2026-04-11T09:45:00Z",
+    "git": "2026-04-11T09:45:00Z",
+    "email": null,
+    "calendar": null,
+    "weather": null
   },
-  "checkSchedule": {
-    "morning": "08:00",
-    "afternoon": "14:00",
-    "evening": "20:00"
-  },
-  "timezone": "UTC",
-  "alertsEnabled": true,
-  "quietHours": {
-    "start": "23:00",
-    "end": "08:00"
-  },
-  "lastHeartbeat": 1712780920,
-  "serviceStatus": "running",
-  "keepaliveStatus": "active"
+  "notes": "Email & calendar not configured in sandbox environment. Git commit completed: 6 new production skills added."
 }
