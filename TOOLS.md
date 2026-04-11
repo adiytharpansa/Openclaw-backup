@@ -4,16 +4,16 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
-## 🧠 Available Skills (100+ Total)
+## 🧠 Available Skills (101+ Total)
 
 **Base Skills:** 89  
-**Custom Skills:** 18  
+**Custom Skills:** 19  
 **Advanced Skills:** 5 (NEW!)
 **Workflow Skills:** 1 (NEW!)  
 **Personal Skills:** 2 (NEW!)
 **Media Skills:** 1 (NEW!)
 **File Sharing Skills:** 1 (NEW!)  
-**Total:** 100+ skills ready to use!
+**Total:** 101+ skills ready to use!
 
 ### Communication & Messaging
 - **discord** - Control Discord (send messages, react, manage threads, moderation)
@@ -80,6 +80,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **self-evolution** - Auto self-improve, install skills, optimize workflows 🧬 NEW!
 - **oracle** - Second-model review for debugging, refactors, design checks
 - **memory-permanence** - Ultimate memory & permanence system ✨ NEW!
+- **self-evolving-ai** - AI that learns from YOU! 🧬 ⭐ NEW!
 
 ### 🚀 Advanced Skills (NEW! - 2026-04-10)
 - **ai-agent-orchestrator** - Multi-agent coordination & parallel processing ⭐⭐⭐⭐⭐
